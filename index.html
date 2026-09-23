@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Currency Converter</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="converter-card">
+
+            <h1>Currency Converter</h1>
+            <p class="subtitle">Convert currencies using live exchange rates</p>
+
+            <div class="input-group">
+                <label for="amount">Amount</label>
+                <input
+                    type="number"
+                    id="amount"
+                    placeholder="Enter amount"
+                    value="1"
+                    min="0"
+                >
+            </div>
+
+            <div class="currency-section">
+
+                <div class="currency-box">
+                    <label for="fromCurrency">From</label>
+
+                    <select id="fromCurrency">
+                        <option value="USD">🇺🇸 USD - US Dollar</option>
+                        <option value="INR">🇮🇳 INR - Indian Rupee</option>
+                        <option value="EUR">🇪🇺 EUR - Euro</option>
+                        <option value="GBP">🇬🇧 GBP - British Pound</option>
+                        <option value="JPY">🇯🇵 JPY - Japanese Yen</option>
+                        <option value="AUD">🇦🇺 AUD - Australian Dollar</option>
+                        <option value="CAD">🇨🇦 CAD - Canadian Dollar</option>
+                        <option value="SGD">🇸🇬 SGD - Singapore Dollar</option>
+                    </select>
+                </div>
+
+                <button id="swapBtn" class="swap-btn" title="Swap currencies">
+                    ⇄
+                </button>
+
+                <div class="currency-box">
+                    <label for="toCurrency">To</label>
+
+                    <select id="toCurrency">
+                        <option value="INR">🇮🇳 INR - Indian Rupee</option>
+                        <option value="USD">🇺🇸 USD - US Dollar</option>
+                        <option value="EUR">🇪🇺 EUR - Euro</option>
+                        <option value="GBP">🇬🇧 GBP - British Pound</option>
+                        <option value="JPY">🇯🇵 JPY - Japanese Yen</option>
+                        <option value="AUD">🇦🇺 AUD - Australian Dollar</option>
+                        <option value="CAD">🇨🇦 CAD - Canadian Dollar</option>
+                        <option value="SGD">🇸🇬 SGD - Singapore Dollar</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button id="convertBtn" class="convert-btn">
+                Convert Currency
+            </button>
+
+            <div id="loading" class="loading">
+                Converting...
+            </div>
+
+            <div id="result" class="result">
+                <p class="result-label">Converted Amount</p>
+                <h2 id="convertedAmount">₹ 0.00</h2>
+                <p id="rateText">1 USD = 0 INR</p>
+            </div>
+
+            <p id="errorMessage" class="error"></p>
+
+            <div class="footer">
+                <p>Exchange rates powered by Frankfurter API</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

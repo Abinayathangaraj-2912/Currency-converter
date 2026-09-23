@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #667eea, #764ba2);
+
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+}
+
+.converter-card {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.input-group,
+.currency-box {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    font-size: 15px;
+    outline: none;
+
+    background: #fafafa;
+}
+
+input:focus,
+select:focus {
+    border-color: #667eea;
+}
+
+.currency-section {
+    display: flex;
+    align-items: end;
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.currency-box {
+    flex: 1;
+}
+
+.swap-btn {
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #667eea;
+    color: white;
+
+    font-size: 22px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.swap-btn:hover {
+    transform: rotate(180deg);
+    background: #5568d8;
+}
+
+.convert-btn {
+    width: 100%;
+
+    margin-top: 30px;
+    padding: 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #667eea;
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.convert-btn:hover {
+    background: #5568d8;
+    transform: translateY(-2px);
+}
+
+.result {
+    margin-top: 25px;
+    padding: 20px;
+
+    text-align: center;
+
+    background: #f5f7ff;
+    border-radius: 12px;
+}
+
+.result-label {
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.result h2 {
+    color: #667eea;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+#rateText {
+    color: #555;
+}
+
+.loading {
+    display: none;
+
+    text-align: center;
+    margin-top: 20px;
+
+    color: #667eea;
+    font-weight: bold;
+}
+
+.error {
+    color: #e74c3c;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 25px;
+
+    color: #999;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+
+    .converter-card {
+        padding: 25px 20px;
+    }
+
+    .currency-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .swap-btn {
+        align-self: center;
+        transform: rotate(90deg);
+    }
+
+    .swap-btn:hover {
+        transform: rotate(270deg);
+    }
+}
